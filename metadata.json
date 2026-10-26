@@ -1,0 +1,8 @@
+{
+  "name": "Jagan Mohan Dash Portfolio",
+  "description": "Full-stack development portfolio with projects in web systems, cybersecurity, and data analytics.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
