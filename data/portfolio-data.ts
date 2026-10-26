@@ -75,7 +75,7 @@ export const siteCopy: SiteCopy = {
   headline: "B.Tech Computer Science Student | Full-Stack Developer",
   subheadline: "As a Computer Science and Engineering student at AIET, Bhubaneswar, I am building a strong foundation in engineering principles, software development, and emerging technologies.",
   description:
-    "I am a Computer Science and Engineering student passionate about full-stack development, cybersecurity, and real-world problem solving. My academic journey is complemented by hands-on projects, hackathon participation, and a growing interest in building secure, scalable, and user-friendly digital systems.",
+"Hi, I'm Jagan Mohan Dash, a Computer Science student passionate about full-stack development, advanced technologies, and building practical software solutions. Through my academic journey and hackathon participation, I have developed scalable web applications, explored emerging tools, and applied technology to solve real-world problems.",
   location: "Bhubaneswar, India",
   email: "jagnsuvhamohan@gmail.com",
   availability: "Open to SDE internships, frontend, backend, and full-stack opportunities",

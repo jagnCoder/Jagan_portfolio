@@ -24,7 +24,7 @@ export function ProjectsSection() {
     <MotionSection id="projects" className="bg-[#050816]">
       <SectionHeading
         eyebrow="Featured Projects"
-        title="Cinematic case studies with a clear problem, solution, and system architecture."
+        title="Practical project showcases with clear objectives, implementation, and technical architecture."
         description="Hover the cards for subtle parallax and open a detail view to inspect the thinking behind each project."
       />
       <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-3">
