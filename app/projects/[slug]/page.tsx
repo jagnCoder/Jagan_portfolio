@@ -4,6 +4,12 @@ import { ArrowLeft, ArrowUpRight, Layers3 } from "lucide-react";
 import { projects } from "@/data/portfolio-data";
 import type { Metadata } from "next";
 
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
 }
