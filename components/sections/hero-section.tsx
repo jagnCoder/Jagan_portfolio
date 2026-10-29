@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { NeuralFieldCanvas } from "@/components/canvas/neural-field";
 import { MagneticButton } from "@/components/ui/magnetic-button";
@@ -34,7 +34,7 @@ export function HeroSection() {
           <motion.div variants={textVariants} transition={{ duration: 0.7 }}>
             <Pill>
               <Sparkles className="mr-2 h-3 w-3" />
-              AI / ML research portfolio
+              Full-Stack Development Portfolio
             </Pill>
           </motion.div>
           <motion.p
@@ -51,7 +51,7 @@ export function HeroSection() {
           >
             {siteCopy.name}
             <span className="mt-4 block bg-gradient-to-r from-sky-200 via-cyan-100 to-violet-200 bg-clip-text text-transparent">
-              builds secure, scalable software for modern teams.
+              builds practical, user-centric software solutions.
             </span>
           </motion.h1>
           <motion.p
@@ -74,19 +74,25 @@ export function HeroSection() {
             transition={{ duration: prefersReducedMotion ? 0.2 : 0.85 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <MagneticButton href="#projects">
-              Explore Projects <ArrowRight className="ml-2 h-4 w-4" />
-            </MagneticButton>
-            <MagneticButton href="#contact" className="border-sky-300/20 bg-sky-300/10">
-              Start a Conversation
-            </MagneticButton>
+            <motion.div
+              variants={textVariants}
+              transition={{ duration: prefersReducedMotion ? 0.2 : 0.85 }}
+              className="mt-10 flex flex-wrap items-center gap-4"
+            >
+              <MagneticButton href="#projects">
+                Explore Projects <ArrowRight className="ml-2 h-4 w-4" />
+              </MagneticButton>
+              <MagneticButton href="#contact" className="border-sky-300/20 bg-sky-300/10">
+                Start a Conversation
+              </MagneticButton>
+            </motion.div>
           </motion.div>
 
           <div className="mt-14 grid gap-4 sm:grid-cols-3">
             {[
-              "Cinematic motion",
-              "Research-first systems",
-              "Accessible by design"
+              "Modern Full-Stack",
+              "Backend Systems",
+              "RESTful API Design"
             ].map((item) => (
               <div key={item} className="rounded-[1.5rem] border border-white/10 bg-white/5 px-4 py-4 text-sm text-slate-200 backdrop-blur-xl">
                 {item}
@@ -106,7 +112,7 @@ export function HeroSection() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.35em] text-sky-200/70">Status</p>
-                <h2 className="mt-2 font-display text-2xl text-white">Interactive research system</h2>
+                <h2 className="mt-2 font-display text-2xl text-white">Jagan's Engineering Portfolio Active </h2>
               </div>
               <div className="rounded-full border border-emerald-300/20 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-200">
                 Available
@@ -114,10 +120,10 @@ export function HeroSection() {
             </div>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {[
-                ["01", "Immersive digital storytelling"],
-                ["02", "AI product engineering"],
+                ["01", "Full-Stack Application Engineering"],
+                ["02", "Secure Software Development"],
                 ["03", "Visual systems design"],
-                ["04", "Research communication" ]
+                ["04", "AI-Powered Solutions" ]
               ].map(([index, label]) => (
                 <div key={index} className="rounded-[1.25rem] border border-white/10 bg-slate-950/35 p-4">
                   <p className="text-xs uppercase tracking-[0.3em] text-sky-200/65">{index}</p>
@@ -128,8 +134,7 @@ export function HeroSection() {
             <div className="mt-6 rounded-[1.5rem] border border-white/10 bg-slate-950/40 p-5">
               <p className="text-xs uppercase tracking-[0.3em] text-sky-200/65">Signature interaction</p>
               <p className="mt-3 text-sm leading-7 text-slate-300">
-                A cursor-reactive neural field, cinematic motion, and layered glass surfaces create the site&apos;s most memorable moment.
-              </p>
+                Interactive project showcases, smooth motion design, and dynamic visual components create an engaging experience while highlighting real-world development, cybersecurity, and AI achievements.              </p>
             </div>
           </div>
         </motion.aside>

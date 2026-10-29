@@ -2,9 +2,19 @@
 
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Float, PerspectiveCamera } from "@react-three/drei";
-import { useMemo, useRef } from "react";
+import { useMemo, useRef, useState, useEffect } from "react";
 import * as THREE from "three";
-import { useReducedMotion } from "framer-motion";
+import { useReducedMotion } from "motion/react";
+
+// Helper to check for WebGL support
+function isWebGLAvailable() {
+  try {
+    const canvas = document.createElement("canvas");
+    return !!(window.WebGLRenderingContext && (canvas.getContext("webgl") || canvas.getContext("experimental-webgl")));
+  } catch {
+    return false;
+  }
+}
 
 function CoreMesh() {
   const meshRef = useRef<THREE.Mesh>(null);
@@ -90,15 +100,38 @@ function GridPlane() {
 
 export function NeuralFieldCanvas() {
   const prefersReducedMotion = useReducedMotion();
+  const [webGLSupported, setWebGLSupported] = useState<boolean | null>(null);
 
-  if (prefersReducedMotion) {
-    return <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(75,167,255,0.14),transparent_60%)]" />;
+  useEffect(() => {
+    setWebGLSupported(isWebGLAvailable());
+  }, []);
+
+  const Fallback = () => (
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(75,167,255,0.18),transparent_65%)]">
+      <div className="absolute inset-0 bg-grid-fine bg-[length:48px_48px] opacity-[0.12]" />
+    </div>
+  );
+
+  if (prefersReducedMotion || webGLSupported === false) {
+    return <Fallback />;
+  }
+
+  // Still checking support
+  if (webGLSupported === null) {
+    return <div className="absolute inset-0 bg-[#050816]" />;
   }
 
   return (
     <div className="absolute inset-0">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(75,167,255,0.22),transparent_52%)]" />
-      <Canvas dpr={[1, 1.6]} gl={{ antialias: true, alpha: true }}>
+      <Canvas 
+        dpr={[1, 1.6]} 
+        gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
+        onError={(e) => {
+          console.error("WebGL Canvas Error:", e);
+          setWebGLSupported(false);
+        }}
+      >
         <PerspectiveCamera makeDefault position={[0, 0, 7.2]} fov={42} />
         <color attach="background" args={["#050816"]} />
         <fog attach="fog" args={["#050816", 5, 16]} />

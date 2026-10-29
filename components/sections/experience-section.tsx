@@ -1,6 +1,6 @@
 import { MotionSection } from "@/components/ui/motion-section";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { experience, education } from "@/data/portfolio-data";
+import { experience, education, certifications } from "@/data/portfolio-data";
 
 export function ExperienceSection() {
   return (
@@ -46,6 +46,20 @@ export function ExperienceSection() {
                   <h3 className="mt-3 font-display text-xl text-white">{item.degree}</h3>
                   <p className="mt-1 text-sm text-slate-400">{item.institution}</p>
                   <p className="mt-4 text-sm leading-7 text-slate-300/85">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/35 p-5">
+            <p className="text-xs uppercase tracking-[0.35em] text-sky-200/70">Certifications</p>
+            <div className="mt-4 space-y-4">
+              {certifications.map((cert) => (
+                <div key={cert.title} className="flex flex-col gap-1">
+                  <h4 className="text-sm font-medium text-white">{cert.title}</h4>
+                  <div className="flex justify-between text-xs text-slate-400">
+                    <span>{cert.issuer}</span>
+                    <span>{cert.date}</span>
+                  </div>
                 </div>
               ))}
             </div>
