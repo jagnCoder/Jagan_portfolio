@@ -35,11 +35,10 @@ export type ProjectItem = {
   year: string;
 };
 
-export type ResearchTopic = {
+export type CertificationItem = {
   title: string;
-  summary: string;
-  relatedTo: string[];
-  intensity: "High" | "Medium" | "Exploratory";
+  issuer: string;
+  date: string;
 };
 
 export type ExperienceItem = {
@@ -72,18 +71,19 @@ export type SiteCopy = {
 
 export const siteCopy: SiteCopy = {
   name: "Jagan Mohan Dash",
-  headline: "B.Tech Computer Science Student | Full-Stack Developer",
-  subheadline: "As a Computer Science and Engineering student at AIET, Bhubaneswar, I am building a strong foundation in engineering principles, software development, and emerging technologies.",
+  headline: "Full-Stack Developer | B.Tech Computer Science Student",
+  subheadline: "Specializing in designing Backend Systems and RESTful APIs using Python, with expertise in modern Frontend technologies like React.js and Node.js.",
   description:
-"Hi, I'm Jagan Mohan Dash, a Computer Science student passionate about full-stack development, advanced technologies, and building practical software solutions. Through my academic journey and hackathon participation, I have developed scalable web applications, explored emerging tools, and applied technology to solve real-world problems.",
+    "I am a Computer Science student at AIET, Bhubaneswar, dedicated to engineering practical, user-centric software solutions. My focus lies in full-stack development, leveraging a diverse toolkit from low-level networking to modern web frameworks.",
   location: "Bhubaneswar, India",
-  email: "jagnsuvhamohan@gmail.com",
-  availability: "Open to SDE internships, frontend, backend, and full-stack opportunities",
-  resumePath: "https://jagncoder.github.io/Portfolio/",
+  email: "jaganmohandash1@gmail.com",
+  availability: "Open to Full-Stack, Backend, Web Development, and Software Engineering opportunities.",
+  resumePath: "/assets/Jagan Mohan Dash_Resume.pdf",
   social: [
-    { label: "GitHub", href: "https://github.com/jagnCoder/" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/jagan-mohan-dash/" },
-    { label: "Portfolio", href: "https://jagncoder.github.io/Portfolio/" }
+    { label: "GitHub", href: "https://github.com/jagnCoder" },
+    { label: "LinkedIn", href: "https://linkedin.com/in/jagan-mohan-dash" },
+    { label: "Website", href: "https://jagan-mohan-dash.netlify.app/" },
+    { label:"email", href:"mailto:jaganmohandash1@gmail.com"}
   ]
 };
 
@@ -92,216 +92,200 @@ export const navigation: NavItem[] = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  { label: "Research", href: "#research" },
+  { label: "Certifications", href: "#certifications" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" }
 ];
 
 export const stats: StatItem[] = [
-  { label: "Programming Languages", value: "05+", detail: "Python, Java, C, JavaScript, TypeScript" },
-  { label: "Projects Built", value: "06+", detail: "Neighborhood Helpboard, Portfolio, E-Learning, Flight System, Hotel System, Train Retrieval" },
-  { label: "Core CS Focus", value: "05", detail: "DBMS, OOP, OS, Networks, Security" },
-  { label: "CGPA", value: "8.5", detail: "B.Tech CSE student at AIET" }
+  { label: "Programming Languages", value: "07", detail: "Python, Java, SQL, HTML, CSS, JavaScript, C" },
+  { label: "Technical Projects", value: "05", detail: "Chat App, Task Dashboard, KYC Portal, Web Games, Portfolio" },
+  { label: "Core CS Focus", value: "05", detail: "DSA, DBMS, OS, Networking, Cybersecurity" },
+  { label: "Education Status", value: "2027", detail: "Expected Graduation Year" }
 ];
 
 export const skillGroups: SkillGroup[] = [
   {
     title: "Programming",
-    summary: "Core programming knowledge used across web, data, and system projects.",
+    summary: "Strong foundation in multiple languages for versatile problem solving.",
     accent: "from-cyan-400/20 to-blue-500/10",
-    items: ["Python", "Java", "C", "JavaScript", "TypeScript"]
+    items: ["Python", "Java", "SQL", "HTML/CSS", "JavaScript", "C"]
   },
   {
-    title: "Web Development",
-    summary: "Responsive interfaces, structured frontends, and interactive user experiences.",
+    title: "Frameworks & Tools",
+    summary: "Modern web technologies and developer tools for efficient delivery.",
     accent: "from-violet-400/20 to-fuchsia-500/10",
-    items: ["React", "Vite", "HTML5", "CSS3", "Responsive UI"]
+    items: ["React.js", "Node.js", "Express.js", "FastAPI", "REST APIs", "TCP Socket", "GitHub", "Postman", "Docker"]
   },
   {
-    title: "Backend & Databases",
-    summary: "Building practical solutions with database-driven logic and application flow.",
+    title: "Databases",
+    summary: "Relational and NoSQL database management for robust data persistence.",
     accent: "from-emerald-400/20 to-teal-500/10",
-    items: ["Node.js", "SQLite", "MySQL", "API Integration", "Database Design"]
+    items: ["PostgreSQL", "MongoDB", "SQLite", "Supabase", "MySQL"]
   },
   {
-    title: "Systems & Security",
-    summary: "Computer networks, OS concepts, and security-first engineering mindset.",
+    title: "Core Concepts",
+    summary: "Fundamental computer science knowledge ensuring sound engineering.",
     accent: "from-amber-400/20 to-orange-500/10",
-    items: ["Operating Systems", "Computer Networks", "Security", "Git", "GitHub", "Networking"]
+    items: ["Data Structures & Algorithms", "DBMS", "Operating Systems", "Computer Networks", "CyberSecurity Concepts"]
   }
 ];
 
 export const projects: ProjectItem[] = [
   {
-    slug: "neighborhood-helpboard",
-    title: "Neighborhood Helpboard",
-    subtitle: "TCP Client-Server App for Local Communication",
+    slug: "neighborhood-community-chat",
+    title: "Neighborhood Community Chat",
+    subtitle: "Real-time Communication Platform",
     overview:
-      "A modular Python/C client-server application designed for local neighborhood communication and LAN accessibility.",
+      "A full-stack community communication platform utilizing low-level TCP Sockets for real-time data exchange.",
     problem:
-      "Reliable local coordination was difficult in network-constrained or isolated local environments.",
+      "The need for high-performance, real-time local communication with reliable data persistence.",
     solution:
-      "I built a modular TCP client-server system optimized for local communication, with secure onboarding workflows and live deployments on Render. The architecture supports multiple local nodes and efficient communication handling.",
+      "Built a python http module based backend for RESTful routing and integrated PostgreSQL/SQLite for session management and query routing, containerized with Docker.",
     architecture: [
-      "Client-server networking model",
-      "Modular Python codebase",
-      "LAN-focused communication flow"
+      "TCP Sockets for real-time exchange",
+      "TCP-HTTP and RESTful routing",
+      "Dockerized containerization"
     ],
-    stack: ["Python", "C", "Networking", "TCP/IP"],
-    impact: ["LAN accessibility for local communication", "Stable communication flow across local nodes"],
+    stack: ["Python", "TCP Sockets", "PostgreSQL","supabase", "SQLite", "Docker"],
+    impact: ["Enabled real-time community interaction", "Achieved robust data persistence and session management"],
     links: [
-      { label: "Live Demo", href: "https://neighbour-helpboard.onrender.com/" },
-      { label: "Deployment", href: "https://neighborhood-chat-633872581280.us-west1.run.app/" }
+      { label: "GitHub", href: "https://github.com/jagnCoder/Neighbour-HelpBoard-" },
+      { label: "live-website", href: "https://neighbour-helpboard.onrender.com/" }
     ],
-    year: "2025/2026"
+    year: "2026"
   },
   {
-    slug: "portfolio-site",
-    title: "Portfolio Site",
-    subtitle: "Responsive React + Vite Portfolio",
+    slug: "standalone-web-games",
+    title: "Standalone Interactive Web Games",
+    subtitle: "Vanilla JS Game Suite",
     overview:
-      "A personal portfolio site built with React and Vite, focused on responsive layout, project display, and polished UI/UX.",
+      "A collection of interactive web mini-applications including an RGB color guessing engine and a precision reaction timer.",
     problem:
-      "I needed a clean digital identity to showcase projects, skills, and technical direction in a modern, professional way.",
+      "Optimizing client-side performance for complex game logic using vanilla technologies.",
     solution:
-      "I designed and built a responsive single-page portfolio with interactive cards, structured sections, and well-organized content presentation. It was published through GitHub Pages with a polished visual style.",
+      "Programmed advanced DOM manipulation and core frontend state management for seamless cross-device compatibility.",
     architecture: [
-      "Responsive front-end layout",
-      "Section-based portfolio structure",
-      "Professional UI/UX presentation"
+      "Vanilla JS state management",
+      "Advanced DOM manipulation",
+      "Responsive layout"
     ],
-    stack: ["React", "Vite", "JavaScript", "CSS3", "GitHub Pages"],
-    impact: ["Professional personal branding", "Responsive user experience"],
+    stack: ["JavaScript (ES6+)", "HTML5", "CSS3"],
+    impact: ["High client-side performance", "Smooth interactivity and cross-device support"],
     links: [
-      { label: "Portfolio", href: "https://jagncoder.github.io/Portfolio/" },
-      { label: "GitHub", href: "https://github.com/jagnCoder/" }
+      { label: "GitHub", href: "https://github.com/jagnCoder/jagn-color-game-HTML-TS" }
     ],
     year: "2025"
   },
   {
-    slug: "elearning-platform",
-    title: "E-Learning Platform",
-    subtitle: "Structured Learning Platform with Guided Modules",
+    slug: "personal-portfolio",
+    title: "Personal Portfolio Website",
+    subtitle: "Professional Showcasing Platform",
     overview:
-      "An e-learning platform focused on structured modules and accessible explanations for learners.",
+      "A responsive personal portfolio website designed to showcase technical projects, skills, and professional presence.",
     problem:
-      "Large educational content needed to be organized clearly so learners could navigate topics without confusion.",
+      "Creating a clean, accessible digital presence with modular sections for diverse content types.",
     solution:
-      "I developed a learning platform with structured modules, guided explanations, and clean front-end organization to improve clarity and usability.",
+      "Designed an accessible user interface with modular sections using modern web standards.",
     architecture: [
-      "Structured module flow",
-      "Accessible front-end organization",
-      "Guided learning presentation"
+      "Modular section design",
+      "Clean UI architecture",
+      "Responsive layout"
     ],
-    stack: ["React", "Vite", "Node.js", "JavaScript", "CSS3"],
-    impact: ["Clearer learning flow", "Improved front-end maintainability"],
+    stack: ["HTML5", "CSS3", "JavaScript"],
+    impact: ["Professional online presence", "Highly accessible interface"],
     links: [
-      { label: "GitHub", href: "https://github.com/jagnCoder/" }
+      { label: "Website", href: "https://jagan-mohan-dash.netlify.app/" }
     ],
-    year: "2025/2026"
+    year: "2026"
   },
   {
-    slug: "flight-management-system",
-    title: "Flight Management System",
-    subtitle: "Console-Based Booking and Reservation App",
+    slug: "color-guessing-game",
+    title: "Color Guessing Game",
+    subtitle: "Interactive Web-Based Game",
     overview:
-      "A console-based application with passenger registration, booking, search, and cancellation logic using SQLite.",
+      "A browser-based color guessing game that challenges users to identify colors through visual matching, improving color recognition and engagement through interactive gameplay.",
     problem:
-      "A simple but reliable flight booking workflow was required with data persistence and user operations.",
+      "Creating an engaging and responsive game experience using only client-side technologies while maintaining simplicity and accessibility.",
     solution:
-      "I built a SQLite-backed console application to manage passenger registration, booking, search, and cancellations efficiently.",
+      "Developed a lightweight frontend application using HTML, CSS, and TypeScript with interactive game logic, dynamic color generation, score tracking, and responsive design.",
     architecture: [
-      "Console-based workflow",
-      "SQLite data persistence",
-      "Booking and cancellation operations"
+      "Client-side game logic",
+      "Dynamic color generation",
+      "Responsive user interface"
     ],
-    stack: ["Python", "SQLite", "Console App"],
-    impact: ["Structured operational flow", "Reliable booking system"],
+    stack: ["HTML5", "CSS3", "TypeScript", "JavaScript"],
+    impact: [
+      "Improved user engagement through interactive gameplay",
+      "Demonstrated frontend development and TypeScript fundamentals"
+    ],
     links: [
-      { label: "GitHub", href: "https://github.com/jagnCoder/" }
+      {
+        label: "GitHub",
+        href: "https://github.com/jagnCoder/jagn-color-game-HTML-TS"
+      }
     ],
-    year: "2024/2025"
+    year: "2026"
   },
   {
-    slug: "hotel-management-system",
-    title: "Hotel Management System",
-    subtitle: "Automated Room Booking and Billing System",
+    slug: "java-kyc-portal",
+    title: "Java KYC Verification Portal",
+    subtitle: "Secure User Verification System",
     overview:
-      "An automated room booking and billing application designed for managing room availability and customer bookings.",
+      "A secure user verification system utilizing enterprise-grade Java and MySQL relational database.",
     problem:
-      "Manual tracking of room availability and billing was inefficient and error-prone.",
+      "Securely managing user verification workflows and ensuring data persistence and secure connections.",
     solution:
-      "I created a system to automate room bookings, track availability, and manage billing operations in a streamlined workflow.",
+      "Developed core backend validation logic and integrated MySQL via JDBC to execute secure database connections and queries.",
     architecture: [
-      "Booking workflow management",
-      "Availability tracking",
-      "Billing integration"
+      "Enterprise Java workflows",
+      "JDBC Database integration",
+      "Secure validation logic"
     ],
-    stack: ["Java", "Python", "Database Logic"],
-    impact: ["Faster booking handling", "Reduced manual management effort"],
+    stack: ["Java", "JDBC", "MySQL", "OOP"],
+    impact: ["Automated secure verification", "Ensured 100% data persistence via JDBC"],
     links: [
-      { label: "GitHub", href: "https://github.com/jagnCoder/" }
+      { label: "GitHub", href: "https://github.com/jagnCoder/Java-FullStack-KYC-System" }
     ],
-    year: "2024"
-  },
-  {
-    slug: "train-details-retrieval",
-    title: "Train Details Retrieval",
-    subtitle: "Database Search App for Train Information",
-    overview:
-      "A database-driven search application for retrieving and displaying train information quickly and clearly.",
-    problem:
-      "Handling train information lookup efficiently required searchable and structured data management.",
-    solution:
-      "I built a database search application that quickly retrieves and displays train details based on query input.",
-    architecture: [
-      "Database query layer",
-      "Search and display workflow",
-      "Structured data retrieval"
-    ],
-    stack: ["Database Search", "Python", "SQL"],
-    impact: ["Fast retrieval of train details", "Better organized information access"],
-    links: [
-      { label: "GitHub", href: "https://github.com/jagnCoder/" }
-    ],
-    year: "2024"
+    year: "2026"
   }
 ];
 
-export const researchTopics: ResearchTopic[] = [
+export const certifications: CertificationItem[] = [
   {
-    title: "Cybersecurity Fundamentals",
-    summary: "Exploring network security, threat awareness, and secure software development practices to build safer digital systems.",
-    relatedTo: ["Cybersecurity", "Networking", "Security Practices"],
-    intensity: "High"
+    title: "Introduction to Generative AI",
+    issuer: "Google Cloud",
+    date: "September 2026"
   },
   {
-    title: "Data Analytics & Segmentation",
-    summary: "Working with structured datasets to understand patterns, retention behavior, and customer-focused insights.",
-    relatedTo: ["Data Analytics", "Business Intelligence", "User Retention"],
-    intensity: "Medium"
+    title: "Getting Started with Git and GitHub",
+    issuer: "IBM",
+    date: "May 2026"
   },
   {
-    title: "Engineering Workflow & Problem Solving",
-    summary: "Applying systematic thinking to build projects, troubleshoot bugs, and improve product quality under time constraints.",
-    relatedTo: ["Software Design", "Debugging", "Product Thinking"],
-    intensity: "High"
+    title: "Certificate of Completion — Node.js",
+    issuer: "Unstop",
+    date: "May 2026"
+  },
+  {
+    title: "Computer Networks and Network Security",
+    issuer: "IBM",
+    date: "April 2025"
   }
 ];
 
 export const experience: ExperienceItem[] = [
   {
-    role: "Team Lead, Frontend Developer, Backend Developer, Prompt Engineer",
-    organization: "Hackathons",
-    period: "2024 - Present",
+    role: "Full-Stack Development Focus",
+    organization: "AIET, Bhubaneswar",
+    period: "2023 – Present",
     location: "Bhubaneswar, India",
     description:
-      "Took on multiple technical roles while leading teams in academic and hackathon environments, balancing product thinking, frontend implementation, backend logic, and AI-driven demos.",
+      "Applying academic engineering principles to build end-to-end software solutions, with a focus on Python backends and React frontends.",
     highlights: [
-      "Led teams in multiple hackathons under strict deadlines",
-      "Worked as Frontend Developer using React + Vite",
-      "Built backend logic using Python + SQLite and handled prompt-driven AI demo flows",
-      "Coordinated planning, delivery, and execution across team members"
+      "Specialized in Backend Systems and RESTful API design",
+      "Developed expertise in modern Frontend technologies including React.js and Node.js",
+      "Engineered practical, user-centric software solutions as part of technical curriculum"
     ]
   }
 ];
@@ -309,14 +293,14 @@ export const experience: ExperienceItem[] = [
 export const education: EducationItem[] = [
   {
     degree: "Bachelor of Technology in Computer Science and Engineering",
-    institution: "Aryan Institute of Engineering and Technology, Bhubaneswar",
-    period: "2023 – 2027 (Pursuing)",
-    description: "Focused on core engineering principles and computer science fundamentals while building practical software solutions and developing strong technical skills. CGPA: 8.5"
+    institution: "Aryan Institute of Engineering and Technology (AIET)",
+    period: "Expected 2027",
+    description: "Focusing on core engineering principles and computer science fundamentals. Specialized in Full-Stack development and systems engineering."
   }
 ];
 
 export const contact = {
-  cta: "Let's Build Something Practical and Impactful",
-  body: "I am actively looking for SDE internship opportunities, frontend/backend roles, and collaborative engineering projects. Feel free to reach out via email or connect on LinkedIn.",
+  cta: "Let's Engineer Something Meaningful",
+  body: "I am actively seeking opportunities to apply my full-stack and backend skills to real-world challenges. Feel free to connect for collaborations or opportunities.",
   email: siteCopy.email
 };

@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight, Layers3 } from "lucide-react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 import { MotionSection } from "@/components/ui/motion-section";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Modal } from "@/components/ui/modal";

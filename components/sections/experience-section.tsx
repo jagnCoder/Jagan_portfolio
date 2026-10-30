@@ -1,6 +1,6 @@
 import { MotionSection } from "@/components/ui/motion-section";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { experience, education } from "@/data/portfolio-data";
+import { experience, education, certifications } from "@/data/portfolio-data";
 
 export function ExperienceSection() {
   return (
@@ -16,7 +16,7 @@ export function ExperienceSection() {
           <div className="space-y-8">
             {experience.map((item) => (
               <article key={`${item.organization}-${item.role}`} className="relative rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl shadow-glow sm:p-8">
-                <div className="absolute -left-1.5 top-8 h-4 w-4 rounded-full border border-sky-200/40 bg-sky-300 shadow-[0_0_24px_rgba(125,211,252,0.55)] sm:-left-1" />
+                <div className="absolute -left-1.5 top-8 h-[5px] w-[5px] rounded-full border border-sky-200/40 bg-sky-300 shadow-[0_0_24px_rgba(125,211,252,0.55)] sm:-left-1" />
                 <div className="flex flex-wrap items-center gap-3 text-sm text-slate-300">
                   <span className="rounded-full border border-white/10 bg-slate-950/35 px-3 py-1">{item.period}</span>
                   <span>{item.location}</span>
@@ -46,6 +46,20 @@ export function ExperienceSection() {
                   <h3 className="mt-3 font-display text-xl text-white">{item.degree}</h3>
                   <p className="mt-1 text-sm text-slate-400">{item.institution}</p>
                   <p className="mt-4 text-sm leading-7 text-slate-300/85">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/35 p-5">
+            <p className="text-xs uppercase tracking-[0.35em] text-sky-200/70">Certifications</p>
+            <div className="mt-4 space-y-4">
+              {certifications.map((cert) => (
+                <div key={cert.title} className="flex flex-col gap-1">
+                  <h4 className="text-sm font-medium text-white">{cert.title}</h4>
+                  <div className="flex justify-between text-xs text-slate-400">
+                    <span>{cert.issuer}</span>
+                    <span>{cert.date}</span>
+                  </div>
                 </div>
               ))}
             </div>

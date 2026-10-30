@@ -1,13 +1,25 @@
 "use client";
 
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 
 interface PageLoaderProps {
   isVisible: boolean;
+  onSkip?: () => void;
 }
 
-export function PageLoader({ isVisible }: PageLoaderProps) {
+export function PageLoader({ isVisible, onSkip }: PageLoaderProps) {
   const prefersReducedMotion = useReducedMotion();
+  const [showSkip, setShowSkip] = useState(false);
+
+  useEffect(() => {
+    if (!isVisible) {
+      setShowSkip(false);
+      return;
+    }
+    const timer = setTimeout(() => setShowSkip(true), 4000);
+    return () => clearTimeout(timer);
+  }, [isVisible]);
 
   return (
     <AnimatePresence>
@@ -27,10 +39,11 @@ export function PageLoader({ isVisible }: PageLoaderProps) {
             <div className="relative space-y-3">
               <p className="text-xs uppercase tracking-[0.45em] text-sky-200/70">Initializing</p>
               <h1 className="font-display text-2xl font-medium text-white sm:text-3xl">
-                Loading the neural interface
+                Loading projects, skills, and experiences
               </h1>
+
               <p className="mx-auto max-w-md text-sm leading-7 text-slate-300/80">
-                Preparing a cinematic portfolio environment tuned for motion, depth, and focus.
+                Preparing an interactive portfolio built with code, creativity, and precision.
               </p>
             </div>
             <div className="h-px w-full overflow-hidden rounded-full bg-white/10">
@@ -41,6 +54,17 @@ export function PageLoader({ isVisible }: PageLoaderProps) {
                 transition={{ duration: prefersReducedMotion ? 0 : 1.5, repeat: Infinity, ease: "linear" }}
               />
             </div>
+
+            {showSkip && onSkip && (
+              <motion.button
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                onClick={onSkip}
+                className="mt-4 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs text-slate-400 transition-colors hover:border-sky-300/30 hover:text-white"
+              >
+                Enter anyway
+              </motion.button>
+            )}
           </div>
         </motion.div>
       ) : null}
