@@ -6,7 +6,7 @@ export function ExperienceSection() {
   return (
     <MotionSection id="experience" className="bg-[#050816]">
       <SectionHeading
-        eyebrow="Experience & Education"
+        eyebrow="Achievements & Education"
         title="A timeline that frames growth, research, and execution."
         description="The layout stays vertical and readable while still feeling premium and motion-friendly."
       />
@@ -50,7 +50,7 @@ export function ExperienceSection() {
               ))}
             </div>
           </div>
-          <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/35 p-5">
+          <div id="certifications" className="scroll-mt-28 rounded-[1.5rem] border border-white/10 bg-slate-950/35 p-5">
             <p className="text-xs uppercase tracking-[0.35em] text-sky-200/70">Certifications</p>
             <div className="mt-4 space-y-4">
               {certifications.map((cert) => (
