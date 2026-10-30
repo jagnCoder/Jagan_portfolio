@@ -112,7 +112,7 @@ export function HeroSection() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.35em] text-sky-200/70">Status</p>
-                <h2 className="mt-2 font-display text-2xl text-white">Jagan's Engineering Portfolio Active </h2>
+                <h2 className="mt-2 font-display text-2xl text-white">Jagan&apos;s Engineering Portfolio Active </h2>
               </div>
               <div className="rounded-full border border-emerald-300/20 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-200">
                 Available

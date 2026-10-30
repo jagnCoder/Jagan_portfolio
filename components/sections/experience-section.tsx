@@ -16,7 +16,7 @@ export function ExperienceSection() {
           <div className="space-y-8">
             {experience.map((item) => (
               <article key={`${item.organization}-${item.role}`} className="relative rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl shadow-glow sm:p-8">
-                <div className="absolute -left-1.5 top-8 h-4 w-4 rounded-full border border-sky-200/40 bg-sky-300 shadow-[0_0_24px_rgba(125,211,252,0.55)] sm:-left-1" />
+                <div className="absolute -left-1.5 top-8 h-[5px] w-[5px] rounded-full border border-sky-200/40 bg-sky-300 shadow-[0_0_24px_rgba(125,211,252,0.55)] sm:-left-1" />
                 <div className="flex flex-wrap items-center gap-3 text-sm text-slate-300">
                   <span className="rounded-full border border-white/10 bg-slate-950/35 px-3 py-1">{item.period}</span>
                   <span>{item.location}</span>

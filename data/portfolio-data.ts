@@ -77,12 +77,13 @@ export const siteCopy: SiteCopy = {
     "I am a Computer Science student at AIET, Bhubaneswar, dedicated to engineering practical, user-centric software solutions. My focus lies in full-stack development, leveraging a diverse toolkit from low-level networking to modern web frameworks.",
   location: "Bhubaneswar, India",
   email: "jaganmohandash1@gmail.com",
-  availability: "Available for Full-Stack & Backend roles",
-  resumePath: "/public/assets/aistudio/JaganCV_Overleaf_d77f9048.pdf",
+  availability: "Open to Full-Stack, Backend, Web Development, and Software Engineering opportunities.",
+  resumePath: "/assets/Jagan Mohan Dash_Resume.pdf",
   social: [
     { label: "GitHub", href: "https://github.com/jagnCoder" },
     { label: "LinkedIn", href: "https://linkedin.com/in/jagan-mohan-dash" },
-    { label: "Website", href: "https://jaganmohandash1.com" }
+    { label: "Website", href: "https://jagan-mohan-dash.netlify.app/" },
+    { label:"email", href:"mailto:jaganmohandash1@gmail.com"}
   ]
 };
 
