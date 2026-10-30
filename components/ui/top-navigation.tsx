@@ -2,11 +2,12 @@ import Link from "next/link";
 import { navigation, siteCopy } from "@/data/portfolio-data";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { DownloadResumeButton } from "@/components/ui/download-resume-button";
+import { MobileMenu } from "@/components/ui/mobile-menu";
 
 export function TopNavigation() {
   return (
     <header className="fixed left-0 right-0 top-0 z-40 px-4 pt-4 sm:px-6 lg:px-8">
-      <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-slate-950/55 px-4 py-3 backdrop-blur-2xl shadow-glow">
+      <div className="relative mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-slate-950/55 px-4 py-3 backdrop-blur-2xl shadow-glow">
         <Link href="#home" className="group flex items-center gap-3">
           <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-sm font-semibold text-white transition-colors group-hover:border-sky-300/40 group-hover:text-sky-200">
             {siteCopy.name.slice(0, 1)}
@@ -27,11 +28,12 @@ export function TopNavigation() {
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-3">
-          <div className="hidden sm:block">
-            <DownloadResumeButton />
-          </div>
-          <MagneticButton href="#contact">Contact</MagneticButton>
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+          <DownloadResumeButton compact className="px-3 py-2 text-xs sm:px-5 sm:py-3 sm:text-sm" />
+          <MagneticButton href="#contact" className="px-3 py-2 text-xs sm:px-5 sm:py-3 sm:text-sm">
+            Contact
+          </MagneticButton>
+          <MobileMenu />
         </div>
       </div>
     </header>

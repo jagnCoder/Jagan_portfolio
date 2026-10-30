@@ -92,9 +92,8 @@ export const navigation: NavItem[] = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  { label: "Certifications", href: "#certifications" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" }
+  { label: "Achievements", href: "#experience" },
+  { label: "Certifications", href: "#certifications" }
 ];
 
 export const stats: StatItem[] = [
@@ -276,16 +275,17 @@ export const certifications: CertificationItem[] = [
 
 export const experience: ExperienceItem[] = [
   {
-    role: "Full-Stack Development Focus",
+    role: "Full-Stack Development & Academic Distinction",
     organization: "AIET, Bhubaneswar",
     period: "2023 – Present",
     location: "Bhubaneswar, India",
     description:
-      "Applying academic engineering principles to build end-to-end software solutions, with a focus on Python backends and React frontends.",
+      "Maintaining an 8.5 CGPA in Computer Science & Engineering while actively building end-to-end software solutions, from low-level network protocols to production-grade cloud architectures.",
     highlights: [
-      "Specialized in Backend Systems and RESTful API design",
-      "Developed expertise in modern Frontend technologies including React.js and Node.js",
-      "Engineered practical, user-centric software solutions as part of technical curriculum"
+      "Participated in multiple hackathons, securing 3rd Place in the College Hackathon and competing in the Smart India Hackathon",
+      "Architected & deployed full-stack builds spanning real-time TCP sockets, AI web engines, and cloud systems",
+      "Earned professional credentials including the IBM Cybersecurity Professional Certificate & Google Cloud Generative AI Certification",
+      "Applying academic engineering principles to build end-to-end software solutions, with a focus on Python backends and React frontends."
     ]
   }
 ];
