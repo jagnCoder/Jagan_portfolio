@@ -78,7 +78,7 @@ export const siteCopy: SiteCopy = {
   location: "Bhubaneswar, India",
   email: "jaganmohandash1@gmail.com",
   availability: "Open to Full-Stack, Backend, Web Development, and Software Engineering opportunities.",
-  resumePath: "/assets/Jagan Mohan Dash_Resume.pdf",
+  resumePath: "/assets/Jagan_Mohan_Dash_Resume.pdf",
   social: [
     { label: "GitHub", href: "https://github.com/jagnCoder" },
     { label: "LinkedIn", href: "https://linkedin.com/in/jagan-mohan-dash" },
