@@ -25,11 +25,13 @@ export function PageLoader({ isVisible, onSkip }: PageLoaderProps) {
     <AnimatePresence>
       {isVisible ? (
         <motion.div
+          suppressHydrationWarning
           className="fixed inset-0 z-50 flex items-center justify-center bg-[#050816]"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: prefersReducedMotion ? 0.15 : 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
+
           <div className="relative flex w-[min(88vw,26rem)] flex-col items-center gap-8 px-6 text-center">
             <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_top,rgba(121,199,255,0.18),transparent_60%)] blur-3xl" />
             <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-sky-300/20 bg-white/5 shadow-glow">

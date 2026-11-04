@@ -63,6 +63,7 @@ export function MagneticButton(props: Props) {
         onMouseEnter={() => setHovered(true)}
         onMouseMove={handleMove}
         onMouseLeave={reset}
+        suppressHydrationWarning
         {...motionProps}
         {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}
       >
@@ -80,6 +81,7 @@ export function MagneticButton(props: Props) {
       onMouseEnter={() => setHovered(true)}
       onMouseMove={handleMove}
       onMouseLeave={reset}
+      suppressHydrationWarning
       {...motionProps}
       {...(rest as ButtonHTMLAttributes<HTMLButtonElement>)}
     >

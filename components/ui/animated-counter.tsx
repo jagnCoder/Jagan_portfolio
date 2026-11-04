@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useInView, useReducedMotion } from "framer-motion";
+import { useInView, useReducedMotion } from "motion/react";
 
 interface AnimatedCounterProps {
   value: number;
@@ -12,10 +12,18 @@ export function AnimatedCounter({ value, suffix = "+" }: AnimatedCounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-20%" });
   const prefersReducedMotion = useReducedMotion();
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(value);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (!inView || prefersReducedMotion) {
+    setMounted(true);
+    if (!prefersReducedMotion) {
+      setCount(0);
+    }
+  }, [prefersReducedMotion]);
+
+  useEffect(() => {
+    if (!mounted || !inView || prefersReducedMotion) {
       setCount(value);
       return;
     }
@@ -37,11 +45,11 @@ export function AnimatedCounter({ value, suffix = "+" }: AnimatedCounterProps) {
     animationFrame = window.requestAnimationFrame(tick);
 
     return () => window.cancelAnimationFrame(animationFrame);
-  }, [inView, prefersReducedMotion, value]);
+  }, [mounted, inView, prefersReducedMotion, value]);
 
-  if (prefersReducedMotion) {
-    return <span ref={ref}>{value}{suffix}</span>;
-  }
-
-  return <span ref={ref}>{count}{suffix}</span>;
+  return (
+    <span ref={ref} suppressHydrationWarning>
+      {count}{suffix}
+    </span>
+  );
 }

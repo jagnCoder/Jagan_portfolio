@@ -11,6 +11,15 @@ export const metadata: Metadata = {
   description:
     "Official portfolio and project repository of Jagan Mohan Dash, Computer Science undergraduate and Full-Stack Software Developer.",
   metadataBase: new URL("https://jagncoder.github.io/Portfolio/"),
+  icons: {
+    icon: [
+      { url: "/assets/aistudio/image_3a194523.png" },
+      { url: "/favicon.ico" },
+      { url: "/icon.png" }
+    ],
+    shortcut: "/assets/aistudio/image_3a194523.png",
+    apple: "/assets/aistudio/image_3a194523.png"
+  },
   openGraph: {
     title: "Jagan Mohan Dash | Full-Stack Developer Portfolio",
     description:
@@ -31,8 +40,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
-      <body className="bg-surface font-body text-slate-100 antialiased">
+    <html lang="en" suppressHydrationWarning className={`${display.variable} ${body.variable}`}>
+      <body suppressHydrationWarning className="bg-surface font-body text-slate-100 antialiased">
         <SiteShell>{children}</SiteShell>
       </body>
     </html>
