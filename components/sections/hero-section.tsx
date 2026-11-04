@@ -29,8 +29,10 @@ export function HeroSection() {
             hidden: { opacity: 0 },
             show: { opacity: 1, transition: { staggerChildren: 0.1 } }
           }}
+          suppressHydrationWarning
           className="max-w-3xl"
         >
+
           <motion.div variants={textVariants} transition={{ duration: 0.7 }}>
             <Pill>
               <Sparkles className="mr-2 h-3 w-3" />
@@ -74,18 +76,12 @@ export function HeroSection() {
             transition={{ duration: prefersReducedMotion ? 0.2 : 0.85 }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
-            <motion.div
-              variants={textVariants}
-              transition={{ duration: prefersReducedMotion ? 0.2 : 0.85 }}
-              className="mt-10 flex flex-wrap items-center gap-4"
-            >
-              <MagneticButton href="#projects">
-                Explore Projects <ArrowRight className="ml-2 h-4 w-4" />
-              </MagneticButton>
-              <MagneticButton href="#contact" className="border-sky-300/20 bg-sky-300/10">
-                Start a Conversation
-              </MagneticButton>
-            </motion.div>
+            <MagneticButton href="#projects">
+              Explore Projects <ArrowRight className="ml-2 h-4 w-4" />
+            </MagneticButton>
+            <MagneticButton href="#contact" className="border-sky-300/20 bg-sky-300/10">
+              Start a Conversation
+            </MagneticButton>
           </motion.div>
 
           <div className="mt-14 grid gap-4 sm:grid-cols-3">
@@ -105,8 +101,10 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: prefersReducedMotion ? 0.2 : 0.8, delay: 0.2 }}
+          suppressHydrationWarning
           className="relative"
         >
+
           <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_top,rgba(121,199,255,0.2),transparent_68%)] blur-2xl" />
           <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-2xl">
             <div className="flex items-center justify-between">

@@ -35,12 +35,14 @@ export function ProjectsSection() {
               key={project.slug}
               whileHover={prefersReducedMotion ? undefined : { y: -8 }}
               transition={{ duration: 0.3 }}
+              suppressHydrationWarning
               className={cn(
                 "group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl shadow-glow transition-colors",
                 isActive && "border-sky-300/35 bg-white/7"
               )}
               onMouseEnter={() => setActiveSlug(project.slug)}
             >
+
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(121,199,255,0.15),transparent_60%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <div className="relative flex h-full flex-col">
                 <div className="flex items-start justify-between gap-4">

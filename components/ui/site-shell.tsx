@@ -36,12 +36,8 @@ export function SiteShell({ children }: SiteShellProps) {
     <>
       <TopProgress />
       <PageLoader isVisible={showLoader} onSkip={handleSkip} />
-      {mounted && (
-        <>
-          <CustomCursor />
-          <TopNavigation />
-        </>
-      )}
+      <CustomCursor />
+      <TopNavigation />
       <div className="relative min-h-screen overflow-x-clip">{children}</div>
     </>
   );

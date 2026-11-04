@@ -55,6 +55,7 @@ export function ContactSection() {
         </aside>
         <form
           onSubmit={handleSubmit}
+          suppressHydrationWarning
           className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-sky-300/10 via-white/5 to-violet-400/10 p-6 backdrop-blur-xl shadow-glow sm:p-8"
         >
           <div className="grid gap-4 sm:grid-cols-2">
@@ -64,6 +65,7 @@ export function ContactSection() {
                 value={form.name}
                 onChange={(event) => setForm({ ...form, name: event.target.value })}
                 required
+                suppressHydrationWarning
                 className="w-full rounded-[1.25rem] border border-white/10 bg-slate-950/35 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-sky-300/30"
                 placeholder="Your name"
               />
@@ -75,6 +77,7 @@ export function ContactSection() {
                 value={form.email}
                 onChange={(event) => setForm({ ...form, email: event.target.value })}
                 required
+                suppressHydrationWarning
                 className="w-full rounded-[1.25rem] border border-white/10 bg-slate-950/35 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-sky-300/30"
                 placeholder="you@example.com"
               />
@@ -87,6 +90,7 @@ export function ContactSection() {
               onChange={(event) => setForm({ ...form, message: event.target.value })}
               required
               rows={7}
+              suppressHydrationWarning
               className="w-full rounded-[1.25rem] border border-white/10 bg-slate-950/35 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-sky-300/30"
               placeholder="Tell me what you want to build, who it is for, and what makes it meaningful."
             />
