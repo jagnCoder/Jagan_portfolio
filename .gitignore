@@ -9,3 +9,6 @@ coverage
 .env.test.local
 .env.production.local
 .DS_Store
+
+# Local Netlify folder
+.netlify
