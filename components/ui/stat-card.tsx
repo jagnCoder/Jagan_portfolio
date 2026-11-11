@@ -12,7 +12,7 @@ export function StatCard({ value, label, detail, className }: StatCardProps) {
   return (
     <div
       className={cn(
-        "group rounded-[1.75rem] border border-white/10 bg-white/5 p-5 backdrop-blur-xl transition-transform duration-300 hover:-translate-y-1 hover:border-sky-300/20 hover:bg-white/7",
+        "group rounded-[1.75rem] border border-white/10 bg-white/5 p-5 backdrop-blur-md transition-transform duration-300 hover:-translate-y-1 hover:border-sky-300/20 hover:bg-white/7",
         className
       )}
     >

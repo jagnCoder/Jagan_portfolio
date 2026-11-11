@@ -19,7 +19,7 @@ export function HeroSection() {
       <NeuralFieldCanvas />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,8,22,0.12)_0%,rgba(5,8,22,0.55)_70%,#050816_100%)]" />
       <div className="absolute inset-0 bg-grid-fine bg-[length:48px_48px] opacity-[0.15]" />
-      <div className="absolute left-1/2 top-0 h-[42rem] w-[42rem] -translate-x-1/2 rounded-full bg-radial-glow blur-3xl" />
+      <div className="absolute left-1/2 top-0 h-[42rem] w-[42rem] -translate-x-1/2 rounded-full bg-radial-glow blur-xl" />
 
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 pb-20 pt-8 lg:grid-cols-[1.2fr_0.8fr] lg:pt-12">
         <motion.div
@@ -90,7 +90,7 @@ export function HeroSection() {
               "Backend Systems",
               "RESTful API Design"
             ].map((item) => (
-              <div key={item} className="rounded-[1.5rem] border border-white/10 bg-white/5 px-4 py-4 text-sm text-slate-200 backdrop-blur-xl">
+              <div key={item} className="rounded-[1.5rem] border border-white/10 bg-white/5 px-4 py-4 text-sm text-slate-200 backdrop-blur-md">
                 {item}
               </div>
             ))}
@@ -105,8 +105,8 @@ export function HeroSection() {
           className="relative"
         >
 
-          <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_top,rgba(121,199,255,0.2),transparent_68%)] blur-2xl" />
-          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-2xl">
+          <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_top,rgba(121,199,255,0.2),transparent_68%)] blur-xl" />
+          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-xl">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.35em] text-sky-200/70">Status</p>

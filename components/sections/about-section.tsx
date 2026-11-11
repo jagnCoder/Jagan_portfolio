@@ -13,7 +13,7 @@ export function AboutSection() {
         description="The site highlights my background in full-stack development, cybersecurity, and student-led product building with a focus on dependable systems."
       />
       <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl shadow-glow sm:p-8">
+        <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-md shadow-glow sm:p-8">
           <p className="text-xs uppercase tracking-[0.35em] text-sky-200/70">Professional snapshot</p>
           <h3 className="mt-4 font-display text-3xl text-white sm:text-4xl">{siteCopy.headline}</h3>
           <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-300/85 sm:text-base">
@@ -44,7 +44,7 @@ export function AboutSection() {
               />
             );
           })}
-          <div className="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-sky-300/10 via-white/5 to-violet-400/10 p-5 backdrop-blur-xl sm:col-span-2">
+          <div className="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-sky-300/10 via-white/5 to-violet-400/10 p-5 backdrop-blur-md sm:col-span-2">
             <p className="text-xs uppercase tracking-[0.35em] text-sky-200/70">Core CS Concepts</p>
             <div className="mt-4 flex flex-wrap gap-3 text-sm text-slate-200">
               {[

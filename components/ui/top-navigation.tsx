@@ -8,7 +8,7 @@ import { MobileMenu } from "@/components/ui/mobile-menu";
 export function TopNavigation() {
   return (
     <header className="fixed left-0 right-0 top-0 z-40 px-4 pt-4 sm:px-6 lg:px-8">
-      <div className="relative mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-slate-950/55 px-4 py-3 backdrop-blur-2xl shadow-glow">
+      <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-slate-950/55 px-4 py-3 backdrop-blur-xl shadow-glow">
         <Link href="#home" className="group flex items-center gap-3">
           <div className="relative flex h-9 w-9 overflow-hidden items-center justify-center rounded-full border border-white/10 bg-white/5 transition-colors group-hover:border-sky-300/40">
             <Image

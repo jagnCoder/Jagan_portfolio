@@ -21,7 +21,7 @@ export function ProblemSolvingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="group relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 p-8 backdrop-blur-xl shadow-glow transition-all hover:border-sky-300/25"
+          className="group relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-white/5 p-8 backdrop-blur-md shadow-glow transition-all hover:border-sky-300/25"
         >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(121,199,255,0.1),transparent_50%)]" />
           

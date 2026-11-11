@@ -44,7 +44,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           Back to projects
         </Link>
 
-        <section className="mt-8 rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-xl sm:p-8">
+        <section className="mt-8 rounded-[2rem] border border-white/10 bg-white/5 p-6 shadow-glow backdrop-blur-md sm:p-8">
           <div className="flex flex-wrap items-start justify-between gap-6">
             <div>
               <p className="text-xs uppercase tracking-[0.35em] text-sky-200/70">{project.year}</p>

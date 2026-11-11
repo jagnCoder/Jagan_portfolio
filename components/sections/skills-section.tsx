@@ -14,7 +14,7 @@ export function SkillsSection() {
         {skillGroups.map((group, index) => (
           <article
             key={group.title}
-            className={`rounded-[2rem] border border-white/10 bg-gradient-to-br ${group.accent} p-6 backdrop-blur-xl shadow-glow`}
+            className={`rounded-[2rem] border border-white/10 bg-gradient-to-br ${group.accent} p-6 backdrop-blur-md shadow-glow`}
           >
             <div className="flex items-start justify-between gap-6">
               <div>

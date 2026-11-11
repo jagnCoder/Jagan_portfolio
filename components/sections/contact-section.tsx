@@ -28,7 +28,7 @@ export function ContactSection() {
         description={contact.body}
       />
       <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <aside className="space-y-6 rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-xl shadow-glow sm:p-8">
+        <aside className="space-y-6 rounded-[2rem] border border-white/10 bg-white/5 p-6 backdrop-blur-md shadow-glow sm:p-8">
           <div>
             <p className="text-xs uppercase tracking-[0.35em] text-sky-200/70">Availability</p>
             <p className="mt-3 text-lg text-slate-200">{siteCopy.availability}</p>
@@ -56,7 +56,7 @@ export function ContactSection() {
         <form
           onSubmit={handleSubmit}
           suppressHydrationWarning
-          className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-sky-300/10 via-white/5 to-violet-400/10 p-6 backdrop-blur-xl shadow-glow sm:p-8"
+          className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-sky-300/10 via-white/5 to-violet-400/10 p-6 backdrop-blur-md shadow-glow sm:p-8"
         >
           <div className="grid gap-4 sm:grid-cols-2">
             <label className="space-y-2 text-sm text-slate-200">
