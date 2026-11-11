@@ -194,7 +194,8 @@ export const projects: ProjectItem[] = [
     stack: ["HTML5", "CSS3", "JavaScript"],
     impact: ["Professional online presence", "Highly accessible interface"],
     links: [
-      { label: "Website", href: "https://jagan-mohan-dash.netlify.app/" }
+      { label: "Website", href: "https://jagan-mohan-dash.netlify.app/" },
+      { label: "GitHub", href: "https://github.com/jagnCoder/Jagan_portfolio" }
     ],
     year: "2026"
   },
@@ -219,10 +220,8 @@ export const projects: ProjectItem[] = [
       "Demonstrated frontend development and TypeScript fundamentals"
     ],
     links: [
-      {
-        label: "GitHub",
-        href: "https://github.com/jagnCoder/jagn-color-game-HTML-TS"
-      }
+      { label: "Website", href: "https://color-guessing-game-by-jagn.netlify.app/" },
+      { label: "GitHub", href: "https://github.com/jagnCoder/Jagn-html-games" }
     ],
     year: "2026"
   },
@@ -303,4 +302,11 @@ export const contact = {
   cta: "Let's Engineer Something Meaningful",
   body: "I am actively seeking opportunities to apply my full-stack and backend skills to real-world challenges. Feel free to connect for collaborations or opportunities.",
   email: siteCopy.email
+};
+
+export const problemSolving = {
+  title: "Problem Solving & Algorithmic Practice",
+  description: "A dedicated repository for my coding practice and algorithmic challenges. I focus on mastering Data Structures and Algorithms through consistent LeetCode practice, optimization, and interview preparation.",
+  repository: "https://github.com/jagnCoder/leetcode_Solutions",
+  tags: ["Data Structures", "Algorithms", "LeetCode", "Optimization", "Interview Prep"]
 };

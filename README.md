@@ -1,22 +1,22 @@
 # Jagan Mohan Dash Portfolio
 
-A cinematic personal portfolio built with Next.js, Tailwind CSS, Framer Motion, and React Three Fiber. This project presents a modern, research-driven developer profile with sections for about, skills, projects, research interests, experience, and contact.
+A cinematic personal portfolio built with Next.js, Tailwind CSS, Motion, and React Three Fiber. This project presents a modern, full-stack developer profile with sections for about, skills, projects, certifications, experience, and contact.
+
+**Live Demo:** [https://jagan-mohan-dash.netlify.app/](https://jagan-mohan-dash.netlify.app/)
 
 ## Overview
 
-This portfolio is designed for a full-stack developer and cybersecurity enthusiast, with a premium visual style and interactive UI. It highlights personal projects, technical expertise, education, research interests, and contact information.
+This portfolio is designed for a full-stack developer specializing in backend systems and RESTful APIs, with a premium visual style and interactive UI. It highlights personal projects like the Neighborhood Community Chat, technical expertise across multiple stacks, certifications from Google and IBM, and academic background.
 
 ## Tech Stack
 
-- Next.js 15
-- React 19
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Lucide React
-- @react-three/fiber
-- @react-three/drei
-- Three.js
+- **Framework:** Next.js 15
+- **Library:** React 19
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animation:** Motion (formerly Framer Motion)
+- **3D Graphics:** React Three Fiber, Three.js, @react-three/drei
+- **Icons:** Lucide React
 
 ## Project Structure
 
@@ -31,46 +31,47 @@ portfolio/
 │       └── [slug]/
 │           └── page.tsx
 ├── components/
-│   ├── canvas/
-│   ├── sections/
-│   └── ui/
+│   ├── canvas/      # 3D interactive components
+│   ├── sections/    # Page sections (Hero, About, etc.)
+│   └── ui/          # Reusable UI components
 ├── data/
-│   └── portfolio-data.ts
+│   └── portfolio-data.ts  # Centralized content and project data
 ├── lib/
 │   └── utils.ts
+├── public/          # Static assets (images, PDFs)
+├── assets/          # Project-specific assets
 ├── .eslintrc.json
-├── .gitignore
-├── next-env.d.ts
 ├── next.config.mjs
 ├── package.json
-├── postcss.config.mjs
 ├── tailwind.config.ts
-├── tsconfig.json
-└── README.md
+└── tsconfig.json
 ```
 
 ## Key Files
 
-- `data/portfolio-data.ts` — all personal content, skills, projects, education, and contact details
-- `app/page.tsx` — main landing page composition
-- `components/sections/*` — page sections like hero, about, projects, experience, contact
-- `app/layout.tsx` — metadata and global app shell
+- `data/portfolio-data.ts` — contains all personal content, skills, projects, and contact details. Update this file to change the site content.
+- `app/page.tsx` — main landing page composition.
+- `components/sections/*` — individual page sections like Hero, About, Projects, etc.
+- `components/canvas/neural-field.tsx` — the interactive 3D background.
+- `app/layout.tsx` — global metadata, fonts, and the site shell.
 
 ## Getting Started
 
-1. Install dependencies:
+1. **Install dependencies:**
 
 ```bash
 npm install
+# or
+bun install
 ```
 
-2. Start the development server:
+2. **Start the development server:**
 
 ```bash
 npm run dev
 ```
 
-3. Open the app in your browser:
+3. **Open the app in your browser:**
 
 ```text
 http://localhost:3000
@@ -78,11 +79,13 @@ http://localhost:3000
 
 ## Production Build
 
+To build the application for production:
+
 ```bash
 npm run build
 ```
 
-## Run Production Server
+To start the production server:
 
 ```bash
 npm run start
@@ -90,10 +93,10 @@ npm run start
 
 ## Notes
 
-- Personal portfolio content is centralized in `data/portfolio-data.ts`, so updates are easy to manage without rewriting components.
-- The project is currently using placeholder content and sample URLs in some sections; replace them with your real details before publishing.
-- Resume download currently uses a generated text file; replace it with a real PDF if needed.
+- **Centralized Data:** Personal content is managed in `data/portfolio-data.ts`. This allows for easy updates without touching component logic.
+- **WebGL Fallback:** The site includes a robust fallback for the 3D background if WebGL is unavailable or blocked, ensuring visibility across all devices.
+- **Hydration:** Components are optimized to prevent hydration mismatches, especially in high-motion areas.
 
-## GitHub / Deployment
+## License
 
-This project is structured for easy deployment to platforms such as Vercel or GitHub Pages-like hosting setups, depending on your deployment target.
+This project is personal portfolio work. All rights reserved.
