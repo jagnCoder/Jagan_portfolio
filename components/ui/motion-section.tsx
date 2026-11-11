@@ -21,6 +21,7 @@ export function MotionSection({ id, className, children }: MotionSectionProps) {
       whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-15%" }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      style={{ willChange: "transform, opacity" }}
       suppressHydrationWarning
     >
 

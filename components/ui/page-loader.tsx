@@ -33,7 +33,7 @@ export function PageLoader({ isVisible, onSkip }: PageLoaderProps) {
         >
 
           <div className="relative flex w-[min(88vw,26rem)] flex-col items-center gap-8 px-6 text-center">
-            <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_top,rgba(121,199,255,0.18),transparent_60%)] blur-3xl" />
+            <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_top,rgba(121,199,255,0.18),transparent_60%)] blur-xl" />
             <div className="relative flex h-24 w-24 items-center justify-center rounded-full border border-sky-300/20 bg-white/5 shadow-glow">
               <div className="absolute inset-3 rounded-full border border-sky-200/10 animate-pulseGlow" />
               <div className="h-3 w-3 rounded-full bg-sky-300 shadow-[0_0_40px_rgba(121,199,255,0.8)]" />

@@ -173,6 +173,7 @@ export const projects: ProjectItem[] = [
     stack: ["JavaScript (ES6+)", "HTML5", "CSS3"],
     impact: ["High client-side performance", "Smooth interactivity and cross-device support"],
     links: [
+      { label: "Website", href: "https://color-guessing-game-by-jagn.netlify.app/" },
       { label: "GitHub", href: "https://github.com/jagnCoder/jagn-color-game-HTML-TS" }
     ],
     year: "2025"
